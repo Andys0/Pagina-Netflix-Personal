@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0"><!--Para hacer responsiva la págna, esta linea hace el 50% del trabajo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesprueba.css" />   <!--Se recomienda poner este link siempre al final-->
+</head>
+
+
+<body>
+    <div class="padre">
+        <header class="header margen-interno">         <!--Todo el contorno-->
+            <div class="menu">          <!--Caja grande --> <!--Las otras tres lineas son tres cajitas mas-->
+                <div class="logo">
+                    <a href="indexprueba.html"><img src="https://img.icons8.com/color/144/000000/netflix.png" alt="logo"></a>
+                </div>
+                <nav class="izquierda">
+                    <a href="indexprueba.html">Inicio</a>
+                    <a href="#">Series</a>
+                    <a href="#">Películas</a>
+                    <a href="#">Novedades populares</a>
+                    <a href="#">Mi lista</a>
+                </nav>
+                <nav class="derecha">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <!--<a href="#">Niños</a>-->
+                    <a href="#"><i class="fas fa-bell"></i></a>
+                    <a href="#"><i class="fas fa-user"></i></a>
+                </nav>
+            </div>
+
+            <div class="principal">             <!--principal de netfliz-->
+                <h1>Orgullo y prejuicio</h1>
+                <p>En la novela de Jane Austen del siglo XIX, la Sra. Bennet quiere casar a sus hijas
+                    con prósperos caballeros, incluido el recién llegado Sr. Darcy</p>
+                <!--<img src="titulo.jpg" alt="orgullo">-->
+                <button type="button"><i class="fas fa-play"></i>Reproducir</button>
+                <button type="button"><i class="fas fa-info"></i>Más información</button>
+            </div>
+        </header>
+
+        <section class="section margen-interno">               <!--caja contenedora con el carrete-->
+            <div class="carrete">               <!--caja carrete y luego las opciones a escoger del carrete-->
+                <article class="article">
+                    <a href="#"><img src="betty.jpg" alt="betty"></a>
+                </article>
+                <article class="article">
+                    <a href="#"><img src="breaking-bad.jpg" alt="breaking"></a>
+                </article>
+                <article class="article">
+                    <a href="#"><img src="Anne.jpg" alt="anne"></a>
+                </article>
+                <article class="article">
+                    <a href="#"></a><img src="madre.jpg" alt="madre"></a>
+                </article>
+                <article class="article">
+                    <a href="#"><img src="tresporciento.jpg" alt="tres"></a>
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer margen-interno">
+            <div class="pie"></div>
+        </footer>
+    </div>
+</body>
+</html>

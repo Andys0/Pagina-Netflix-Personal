@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0"><!--Para hacer responsiva la págna, esta linea hace el 50% del trabajo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesprueba.css" />   <!--Se recomienda poner este link siempre al final-->
+</head>
+
+
+<body>
+    <div class="padre">
+        <header class="header margen-interno">         <!--Todo el contorno-->
+            <div class="menu">          <!--Caja grande --> <!--Las otras tres lineas son tres cajitas mas-->
+                <div class="logo">
+                    <a href="indexprueba.html"><img src="https://img.icons8.com/color/144/000000/netflix.png" alt="logo"></a>
+                </div>
+                <nav class="izquierda">
+                    <a href="indexprueba.html">Inicio</a>
+                    <a href="#">Series</a>
+                    <a href="#">Películas</a>
+                    <a href="#">Novedades populares</a>
+                    <a href="#">Mi lista</a>
+                </nav>
+                <nav class="derecha">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <!--<a href="#">Niños</a>-->
+                    <a href="#"><i class="fas fa-bell"></i></a>
+                    <a href="#"><i class="fas fa-user"></i></a>
+                </nav>
+            </div>
+
+            <div class="principal">             <!--principal de netfliz-->
+                <h1>Orgullo y prejuicio</h1>
+                <p>En la novela de Jane Austen del siglo XIX, la Sra. Bennet quiere casar a sus hijas
+                    con prósperos caballeros, incluido el recién llegado Sr. Darcy</p>
+                <!--<img src="titulo.jpg" alt="orgullo">-->
+                <button type="button"><i class="fas fa-play"></i>Reproducir</button>
+                <button type="button"><i class="fas fa-info"></i>Más información</button>
+            </div>
+        </header>
+
+        <section class="section margen-interno">               <!--caja contenedora con el carrete-->
+            <div class="carrete">               <!--caja carrete y luego las opciones a escoger del carrete-->
+                <article class="article">
+                    <img src="betty.jpg" alt="betty">
+                </article>
+                <article class="article">
+                    <img src="breaking-bad.jpg" alt="breaking">
+                </article>
+                <article class="article">
+                    <img src="Anne.jpg" alt="anne">
+                </article>
+                <article class="article">
+                    <img src="madre.jpg" alt="madre">
+                </article>
+                <article class="article">
+                    <img src="tresporciento.jpg" alt="tres">
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer margen-interno">
+            <div class="pie"></div>
+        </footer>
+    </div>
+</body>
+</html>
+
+***********************************************************************************
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;        /*para que los enlaces no tengan lineas y asi*/
+}
+
+.padre{
+    display:flex;
+    flex-flow: column nowrap;   /*que sea flex pero sin alterar el diseño*/
+}
+
+.margen-interno{
+    padding: 0  0 0 45px;
+}
+
+    .header{
+        background: url(../Netflix/orgullo-prejuicio.jpg); 
+        background-position: center;
+        background-attachment: contain;     /*contenida en contenedor*/
+        background-size: cover;             /*no se agrande*/
+        display: flex;
+        flex-flow: column nowrap;  /*lo hicimos flex con display, con esta linea no cambia de forma como lo teniamos al inicio*/
+    }
+        .menu{
+            background: rgba(0 0 0. 1 ); /*degrade en el fondo, se vea la imagen atras*/
+            display: flex;
+            flex-flow: row nowrap;   /*en una misma linea*/
+            height: 100px;
+            align-items: stretch;
+        }
+            .logo{
+                /*background: red;*/
+                /*flex-grow: 1;*/
+                flex:1 1 auto;
+            }
+            .logo img{
+                width: 120px;
+                margin-left: 10px;
+            }
+
+
+
+            .izquierda{
+                /*background: red;*/
+                /*flex-grow: 3;*/
+                flex:3 1 auto;
+                padding-top: 40px;
+            }
+                .izquierda a{
+                    color: white;
+                    font-size: 15px;
+                    letter-spacing: 2px;
+                    padding-left: 15px;
+                }
+                .izquierda a:hover{
+                    color:rgb(136, 148, 160);
+                }
+
+
+
+
+            .derecha{
+                /*background: red;*/
+                /*flex-grow: 3;*/
+                flex:3 1 auto;
+                padding-top: 40px;
+                padding-left: 285px;
+                display: flex;
+            }
+                .derecha a{
+                    color:white;
+                    font-size: 15px;
+                    padding:0 5px;
+                }
+                .derecha a:hover{
+                    color:rgb(136, 148, 160);
+                }
+
+
+
+        .principal{
+            /*background: pink;*/
+            height: 580px;
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        h1{
+            font-family: 'Lora', serif;
+            padding-top: 130px;
+            align-items: flex-start;
+            font-size: 50px;
+            color:white;
+            font-weight: 300;
+            width: 30%;
+            /*text-align: left;*/
+            /*line-height: 1.6;*/
+        }
+        p{
+            font-family: 'Lora', serif;
+            padding-top: 50px;
+            align-items: flex-start;
+            font-size: 25px;
+            color:white;
+            font-weight: 300;
+            text-align: left;
+            width: 50%;
+            /*line-height: 1.6;*/
+        }
+        button{
+            padding-top: 10px;
+            border-radius: 5px;
+            
+            display:flex;
+            flex-direction: row;
+        }
+            button:hover{
+                color: #313132;
+            }
+
+    .section{
+        background: #000;
+        display: flex;
+    }
+        .carrete{
+            background: #000;
+            display: flex;
+            align-items: center;
+            flex-grow: 5;
+            margin:10px 10px 0 10px
+            flex:1 1 45%;           /*a la mitad y comparta con el de a lado*/
+            /*flex-flow: row wrap;    /*grap para que todo este contenido donde yo quiero si es que no alcanza*/
+        }
+            .article{
+                align-items: center;
+                flex-grow: 3; 
+                /*width: 50px;
+                /*height: 100px;*/
+               /* flex: 1 1 auto;*/
+            }
+                .article img{
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+    .footer{
+        background: #000;
+        display:flex;
+        justify-content: center;
+    }
+        .pie{
+            background: #1987;
+            width: 300px;
+        }
